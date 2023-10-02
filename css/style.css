@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* Nav */
+#navbar {
+  background-color: #ff6347;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.profile-link {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.profile-link:hover {
+  text-decoration: underline black;
+}
+
+/* About */
+
+#welcome-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(45deg, #696969 35%, rgba(0, 0, 0, 70%));
+}
+.welcome-title,
+.welcome-subtitle {
+  text-align: center;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 40%);
+}
+
+.welcome-title {
+  margin: 0;
+  font-size: 50px;
+  font-style: bold;
+}
+
+.welcome-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 0;
+}
+
+/* Projects */
+
+#projects {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2;
+  grid-template-areas:
+    "project-item-1 empty-item-one project-item-3 empty-item-four"
+    "empty-item-two project-item-2 empty-item-three project-item-4";
+  background: linear-gradient(-45deg, #a9a9a9, #778899);
+}
+
+.project-tile {
+  background-color: #708090;
+  position: relative;
+  padding-top: 25vh;
+  width: 25vw;
+}
+
+.empty-item {
+  padding-top: 25vh;
+  width: 25vw;
+}
+
+.project-tile:hover {
+  transform: translate(0px, -10px);
+  transition: 0.5s;
+}
+
+.project-tile.one {
+  grid-area: project-item-1;
+}
+
+.project-tile.two {
+  grid-area: project-item-2;
+}
+
+.project-tile.three {
+  grid-area: project-item-3;
+}
+
+.project-tile.four {
+  grid-area: project-item-4;
+}
+
+.project-number {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 50px;
+  font-style: bold;
+}
+
+.project-title h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #4682b4;
+  font-size: 30px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #fffaf0;
+}
+
+/* Contact */
+
+#contacts {
+  width: 100%;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "contacts-title contacts-title contacts-title contacts-title"
+    "contact-item-1 contact-item-2 contact-item-3 contact-item-4";
+  align-items: center;
+  background: linear-gradient(45deg, #696969 35%, rgba(0, 0, 0, 70%));
+}
+
+.contact-item {
+  width: 10vw;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contacts-title {
+  grid-area: contacts-title;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 40%);
+}
+
+.contact-item.one {
+  grid-area: contact-item-1;
+}
+
+.contact-item.two {
+  grid-area: contact-item-2;
+}
+
+.contact-item.three {
+  grid-area: contact-item-3;
+}
+
+.contact-item.four {
+  grid-area: contact-item-4;
+}
+
+.contact-info {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+
+.contact-info i {
+  font-size: 30px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 40%);
+  color: #ff6347;
+}
+
+.contact-info:hover {
+  transform: translate(0px, 10px);
+  transition: 0.2s;
+}
+
+#profile-link {
+  text-decoration: none;
+  color: black;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 40%);
+  font-size: 25px;
+}
+
+/* Footer */
+
+.portfolio-footer {
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(45deg, #696969 35%, rgba(0, 0, 0, 70%));
+  border-top: 5px solid #ff6347;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 35px;
+  margin: 0;
+  padding: 10px;
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Media */
+
+@media (max-width: 968px) {
+  .welcome-title {
+    font-size: 35px;
+  }
+
+  .welcome-subtitle {
+    font-size: 25px;
+  }
+  .contacts-title h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  .contact-info i,
+  #profile-link {
+    font-size: 17px;
+  }
+
+  .project-title h3 {
+    font-size: 20px;
+  }
+
+  .project-number {
+    font-size: 25px;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+}
