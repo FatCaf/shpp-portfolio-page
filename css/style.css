@@ -1,9 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   box-sizing: border-box;
   font-family: "Prompt", sans-serif;
   background: linear-gradient(45deg, #696969 35%, rgba(0, 0, 0, 70%));
+  overflow-x: hidden;
 }
 
 /* Nav */
@@ -14,6 +16,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   z-index: 1;
 }
 
@@ -37,7 +40,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 75vh;
 }
 .welcome-title,
 .welcome-subtitle {
@@ -55,6 +58,15 @@ body {
   font-weight: bold;
   color: #ff6347;
   margin-bottom: 0;
+}
+
+.welcome-description {
+  max-width: 31.25rem;
+  text-align: center;
+}
+
+.welcome-description p {
+  font-size: 1.1875rem;
 }
 
 /* Projects */
@@ -155,12 +167,13 @@ body {
   grid-template-areas:
     "contacts-title contacts-title contacts-title contacts-title"
     "contact-item-1 contact-item-2 contact-item-3 contact-item-4";
-  align-items: center;
 }
 
 .contact-item {
-  width: 10vw;
-  height: 10vh;
+  width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   position: relative;
 }
@@ -235,7 +248,10 @@ body {
 
 /* Media */
 
-@media (max-width: 60.5rem) {
+@media (max-width: 48rem) {
+  #navbar {
+    justify-content: center;
+  }
   .welcome-title {
     font-size: 2.1875rem;
   }
