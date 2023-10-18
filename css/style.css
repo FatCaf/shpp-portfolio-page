@@ -160,7 +160,7 @@ body {
 
 #contacts {
   width: 100%;
-  height: 35vh;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -170,7 +170,7 @@ body {
 }
 
 .contact-item {
-  width: 6.25rem;
+  width: inherit;
   height: 6.25rem;
   display: flex;
   justify-content: center;
@@ -180,6 +180,7 @@ body {
 
 .contacts-title {
   grid-area: contacts-title;
+  width: inherit;
   text-align: center;
   font-size: 1.875rem;
   font-weight: bold;
@@ -248,7 +249,7 @@ body {
 
 /* Media */
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   #navbar {
     justify-content: center;
   }
@@ -275,5 +276,15 @@ body {
 
   .footer-text {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .welcome-title {
+    margin-top: 9.375rem;
+  }
+
+  .contact-item {
+    margin-bottom: 0.625rem;
   }
 }
